@@ -3,12 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import Comment from './Comment';
 
-const commentsFromServer = [
-  {name: 'Jungmin Mun', content: '문천재'},
-  {name: 'Lil-la Go', content:'I am not go-lil-la'},
-  {name: 'Tona Om', content:'위장 깨끗'}
-]
-
 var timer;
 
 class App extends React.Component {
@@ -16,16 +10,19 @@ class App extends React.Component {
     super(props);
     
     this.state = {
-      comments: [],
+      comments: [
+        {id:1, name: 'Jungmin Mun', content: '문천재'},
+        {id:2, name: 'Lil-la Go', content:'I am not go-lil-la'},
+        {id:3, name: 'Tona Om', content:'위장 깨끗'}
+      ]
     };
   }
 
   componentDidMount(){
     let comments = this.state.comments;
     timer = setInterval(() =>{
-      if(comments.length < commentsFromServer.length){
-        let index = comments.length;
-        comments.push(commentsFromServer[index]);
+      if(comments.length > 0){
+        comments.pop();
         this.setState({
           comments: comments
         });
@@ -57,6 +54,8 @@ class App extends React.Component {
           {comments.map((comment, index) => {
             return (
               <Comment
+                key = {comment.id}
+                id = {comment.id}
                 name = {comment.name}
                 content = {comment.content} />
             )
