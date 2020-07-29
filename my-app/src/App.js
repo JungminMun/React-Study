@@ -9,11 +9,12 @@ class App extends React.Component {
   constructor(props){
     super(props);
     
-    this.state = {
+    this.state = { /*임시 데이터*/
       comments: [
-        {id:1, name: 'Jungmin Mun', content: '문천재'},
-        {id:2, name: 'Lil-la Go', content:'I am not go-lil-la'},
-        {id:3, name: 'Tona Om', content:'위장 깨끗'}
+        {id:1, name: 'Jungmin Mun', content: 'asdfasdf'},
+        {id:2, name: 'Lil-la Go', content:'asdf'},
+        {id:3, name: 'Tona Om', content:'wewe'}
+
       ]
     };
   }
