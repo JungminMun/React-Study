@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Chapter06 from './Chapter06';
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Chapter06 />,
   document.getElementById('root')
 );
 
