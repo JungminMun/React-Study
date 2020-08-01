@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Chapter06 from './Chapter06';
+import LoginControl from './Chapter07/LoginControl';
 import * as serviceWorker from './serviceWorker';
 
-
 ReactDOM.render(
-  <Chapter06 />,
+  <LoginControl />,
   document.getElementById('root')
 );
 
